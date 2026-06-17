@@ -3,7 +3,12 @@ import cors from "cors";
 
 const app = express();
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: "https://todo-iota-nine-38.vercel.app/",
+    credentials: true,
+  }
+));
 app.use(express.json());
 
 app.get("/", (req, res) => {
