@@ -5,7 +5,7 @@ const app = express();
 
 app.use(cors(
   {
-    origin: "https://todo-iota-nine-38.vercel.app/",
+    origin: "https://todo-iota-nine-38.vercel.app",
     credentials: true,
   }
 ));
