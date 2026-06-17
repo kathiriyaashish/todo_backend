@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 
 import taskRoutes from "./routes/taskRoutes";
@@ -13,5 +13,11 @@ app.use(
     "/api/tasks",
     taskRoutes
 );
+
+app.get("/", (req, res) => {
+    return res.status(200).json({
+        message: "Server Is Running"
+    });
+});
 
 export default app;
